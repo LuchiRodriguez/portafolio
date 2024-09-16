@@ -198,7 +198,8 @@ Error generating stack: `+l.message+`
   section {
     display: inline-block;
     width: 470px;
-    height: 150px;
+    height: 200px;
+    padding-top: 30px;
     margin-left: 50px;
   }
   h3 {
