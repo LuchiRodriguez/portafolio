@@ -1,4 +1,3 @@
-import NavBar from "../components/NavBar";
 import { StyledHome, Technologies } from "../Styles";
 import profilePicture from "../img/profile.jpg";
 import code from "../img/code.png";
@@ -17,9 +16,8 @@ import photoshop from "../img/photoshop.png";
 
 const Home = () => {
   return (
-    <StyledHome>
-      <NavBar />
-      <section id="home">
+    <StyledHome id="home">
+      <section>
         <img src={profilePicture} alt="" />
         <h1>&#10024;¡Hola mundo! Soy Lucía | Full-Stack Developer&#10024;</h1>
       </section>

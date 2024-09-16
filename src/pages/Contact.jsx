@@ -6,7 +6,7 @@ import github from "../img/github.png";
 import { StyledContact } from "../Styles";
 const Contact = () => {
   return (
-    <StyledContact>
+    <StyledContact id="contact">
       <div>
         <img src={call} alt="" />
         <h1>Contact</h1>

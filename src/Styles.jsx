@@ -7,7 +7,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   body{
       margin: 0;
-      padding: 30px 230px;
+      padding: 0;
     background: linear-gradient(to right, #000000, #3533cd); 
   }
   p {
@@ -18,9 +18,14 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const StyledNavBar = styled.nav`
+  position: fixed;
+  top: 0;
+  padding: 20px 0;
+  width: 100%;
   display: flex;
   justify-content: center;
   gap: 40px;
+  background: linear-gradient(to right, #000000, #3533cd);
   a {
     position: relative;
     display: inline-block;
@@ -72,8 +77,9 @@ export const StyledNavBar = styled.nav`
 `;
 
 export const StyledHome = styled.div`
+  padding: 20px 230px 0;
   section {
-    margin-top: 20px;
+    margin-top: 75px;
     display: flex;
     align-items: center;
     gap: 30px;
@@ -87,6 +93,7 @@ export const StyledHome = styled.div`
 `;
 
 export const Technologies = styled.div`
+  margin-top: 20px;
   div {
     display: flex;
     align-items: center;
@@ -102,6 +109,7 @@ export const Technologies = styled.div`
 `;
 
 export const StyledExperience = styled.div`
+  padding: 60px 230px 0;
   div {
     display: flex;
     align-items: center;
@@ -116,6 +124,7 @@ export const StyledExperience = styled.div`
 `;
 
 export const StyledProjects = styled.div`
+  padding: 60px 230px 0;
   div {
     display: flex;
     align-items: center;
@@ -150,6 +159,8 @@ export const StyledProjects = styled.div`
 `;
 
 export const StyledContact = styled.div`
+  margin-bottom: 50px;
+  padding: 60px 230px 0;
   div {
     display: flex;
     align-items: center;
@@ -159,6 +170,9 @@ export const StyledContact = styled.div`
     height: 30px;
   }
   section {
+    display: inline-block;
+    width: 470px;
+    height: 150px;
     margin-left: 50px;
   }
   h3 {

@@ -4,7 +4,7 @@ import aim from "../img/AIM.mp4";
 import { StyledProjects } from "../Styles";
 const Projects = () => {
   return (
-    <StyledProjects>
+    <StyledProjects id="projects">
       <div>
         <img src={project} alt="" />
         <h1>Projects</h1>
