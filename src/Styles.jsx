@@ -10,44 +10,44 @@ export const GlobalStyle = createGlobalStyle`
       padding: 0;
     background: linear-gradient(to right, #000000, #3533cd); 
   }
-  p {
-    width: 800px;
-    margin: auto;
+  h5{
+    margin: 15px 0;
+    }
+  h6 {
+  margin: 15px 0;
     text-align: justify;
   }
 `;
 
-export const StyledNavBar = styled.nav`
+export const MenuButton = styled.button`
   position: fixed;
-  top: 0;
-  padding: 20px 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  background: linear-gradient(to right, #000000, #3533cd);
+  right: 0;
+  margin: 10px;
+  background: transparent;
+  border: none;
+  img {
+    height: 20px;
+  }
+  @media (min-width: 900px) {
+    display: none;
+  }
+`;
+
+export const StyledNavBar = styled.nav`
+  display: ${({ showMenu }) => (showMenu ? "flex" : "none")};
+  position: fixed;
+  flex-direction: column;
+  width: 40%;
+  top: 50px;
+  right: 0;
+  background-color: #3533cd;
+  border: 2px solid rgb(50, 137, 227);
+  border-radius: 10px;
   a {
-    position: relative;
-    display: inline-block;
-    width: 65px;
+    padding: 10px;
     overflow: hidden;
-    border: 1px solid rgb(50, 137, 227);
-    border-radius: 50px;
-    padding: 0.75rem 2rem;
     text-align: center;
     text-decoration: none;
-    background-color: transparent;
-    span.background-span {
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      bottom: 0px;
-      width: 2px;
-      background-color: rgb(50, 137, 227);
-      transition-property: all;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      transition-duration: 150ms;
-    }
     span.content-span {
       position: relative;
       font-size: 0.875rem;
@@ -74,67 +74,175 @@ export const StyledNavBar = styled.nav`
     box-shadow: var(--tw-ring-inset) 0 0 0
       calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   }
+  span {
+    display: block;
+    width: 90%;
+    margin: auto;
+    border: 1px solid rgb(50, 137, 227);
+  }
+  @media (min-width: 600px) {
+    width: 30%;
+  }
+  @media (min-width: 900px) {
+    background: linear-gradient(to right, #000000, #3533cd);
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    padding: 10px;
+    top: 0;
+    gap: 50px;
+    border: none;
+    span {
+      display: none;
+    }
+  }
 `;
 
 export const StyledHome = styled.div`
-  padding: 20px 230px 0;
+  padding: 20px 50px;
   section {
-    margin-top: 75px;
     display: flex;
     align-items: center;
-    gap: 30px;
+    justify-content: space-evenly;
     img {
-      width: 100px;
-      height: 100px;
+      width: 50px;
+      height: 50px;
       border: 2px solid white;
       border-radius: 100%;
+    }
+    h5 {
+      text-align: center;
+    }
+  }
+  span {
+    display: block;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    border: 1px solid rgb(50, 137, 227);
+  }
+  @media (min-width: 600px) {
+    padding: 20px 100px;
+    section {
+      justify-content: center;
+      gap: 10px;
+    }
+    h6 {
+      font-size: 0.8em;
+    }
+  }
+  @media (min-width: 900px) {
+    padding: 20px 230px;
+    margin-top: 80px;
+    h6 {
+      margin: 20px 150px;
+      font-size: 1.5em;
+    }
+    section {
+      font-size: 2em;
+      img {
+        width: 100px;
+        height: 100px;
+      }
     }
   }
 `;
 
 export const Technologies = styled.div`
-  margin-top: 20px;
+  h5 {
+    margin: 0 10px;
+  }
   div {
     display: flex;
     align-items: center;
-    margin-left: 20px;
   }
   div img {
-    height: 30px;
+    height: 20px;
   }
-  img {
-    margin-right: 20px;
-    height: 60px;
+  section {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    img {
+      width: auto;
+      height: 30px;
+      border: none;
+      border-radius: 0;
+    }
+  }
+  @media (min-width: 900px) {
+    div img {
+      height: 30px;
+    }
+    h5 {
+      margin: 20px 20px;
+      font-size: 2em;
+    }
+    section {
+      img {
+        height: 50px;
+      }
+    }
   }
 `;
 
 export const StyledExperience = styled.div`
-  padding: 60px 230px 0;
+  padding: 0 50px;
   div {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
+    h4 {
+      margin: 0;
+    }
   }
   img {
-    height: 30px;
+    height: 20px;
   }
-  h3 {
-    margin-left: 50px;
+  h5 {
+    margin: 15px 0;
+  }
+  span {
+    display: block;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    border: 1px solid rgb(50, 137, 227);
+  }
+  @media (min-width: 600px) {
+    padding: 0 100px;
+  }
+  @media (min-width: 900px) {
+    img {
+      height: 30px;
+    }
+    padding: 20px 230px;
+    h4 {
+      margin: 0 150px;
+      font-size: 2em;
+    }
+    section {
+      margin: 30px 50px;
+      font-size: 2em;
+    }
   }
 `;
 
 export const StyledProjects = styled.div`
-  padding: 60px 230px 0;
+  padding: 20px 50px 0;
   div {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
+    h4 {
+      margin: 0;
+    }
   }
   img {
-    height: 30px;
-  }
-  section {
-    margin-left: 50px;
+    height: 20px;
   }
   section ~ span {
     display: block;
@@ -144,39 +252,83 @@ export const StyledProjects = styled.div`
     border: 1px solid rgb(50, 137, 227);
   }
   section img {
-    margin-left: 250px;
+    margin: 0 20vw;
     width: 50%;
     height: auto;
   }
   video {
-    margin-left: 380px;
+    margin: 0 10vw;
     border-radius: 30px;
   }
   h4 {
     display: flex;
     gap: 10px;
   }
+  section div {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+  @media (min-width: 600px) {
+    padding: 20px 100px 0;
+    section div {
+      flex-direction: row;
+    }
+    video {
+      margin: 0 25vw;
+    }
+  }
+  @media (min-width: 900px) {
+    img {
+      height: 30px;
+    }
+    padding: 20px 230px;
+    h4 {
+      margin: 0 150px;
+      font-size: 2em;
+    }
+    section {
+      margin: 30px 50px;
+      font-size: 2em;
+    }
+  }
 `;
 
 export const StyledContact = styled.div`
-  margin-bottom: 50px;
-  padding: 60px 230px 0;
+  padding: 20px 50px;
   div {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
+    h4 {
+      margin: 0;
+    }
   }
   img {
-    height: 30px;
+    height: 20px;
   }
   section {
-    display: inline-block;
-    width: 470px;
-    height: 200px;
-    padding-top: 30px;
-    margin-left: 50px;
+    margin-left: 30px;
   }
-  h3 {
-    margin: 10px 50px;
+  @media (min-width: 600px) {
+    padding: 20px 100px;
+  }
+  @media (min-width: 900px) {
+    img {
+      height: 30px;
+    }
+    padding: 20px 230px;
+    h4 {
+      margin: 0 150px;
+      font-size: 2em;
+    }
+    section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px 60px;
+      margin: 30px 50px;
+      font-size: 2em;
+      justify-content: center;
+    }
   }
 `;
