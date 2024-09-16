@@ -1,9 +1,15 @@
-import { Router } from "react-router-dom";
+import Home from "./pages/Home";
+import Projects from "./pages/Projects";
+import Experience from "./pages/Experience";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
     <>
-      <Router />
+      <Home />
+      <Projects />
+      <Experience />
+      <Contact />
     </>
   );
 }
